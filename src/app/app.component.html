@@ -1,0 +1,29 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Numerology name calculator!
+  </h1>
+
+  <div>
+    <input class="name" maxlength="50" (input)="onKeyUp($event.target.value)">
+
+    <div class="total"> Total : {{value}}</div>
+    <div class="total"> Number : {{numerology}}</div>
+
+    <button (click)="save()"> Save </button>
+
+    <table>
+      <thead>
+        <th> Name </th>
+        <th> Total </th>
+        <th> Value </th>
+      </thead>
+
+      <tr *ngFor="let name of names">
+        <td>{{name.name}}</td>
+        <td>{{name.total}}</td>
+        <td>{{name.value}}</td>
+      </tr>
+    </table>
+  </div>
+</div>
